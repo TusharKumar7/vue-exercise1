@@ -6,7 +6,7 @@ const app = Vue.createApp({
       dob: "2000-09-11",
       age: null,
       isValid: false,
-      ageValidation: false,
+      showValidation: false,
       users: [
         { name: `Rahul`, age: 24, imgUrl: "./assets/img1.webp" },
         { name: `Rohit`, age: 20, imgUrl: "./assets/img2.webp" },
@@ -16,11 +16,12 @@ const app = Vue.createApp({
   },
   methods: {
     calculateAge() {
-      const age = Math.floor((new Date() - new Date(this.dob).getTime()) / 3.15576e+10)
+      // (millisecond since Jan 1 1970 - millisecond since dob) / millisecond in 1 year
+      const age = Math.floor((new Date() - new Date(this.dob).getTime()) / 31536000000)
       this.age = age;
     },
     validateAge() {
-      this.ageValidation = true;
+      this.showValidation = true;
       this.isValid = this.age < 18 ? false : true;
     },
   },

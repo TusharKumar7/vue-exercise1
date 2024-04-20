@@ -27,11 +27,6 @@ body {
     rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
 }
 
-.heading-1 {
-  font-weight: 600;
-  font-size: 1.2rem;
-}
-
 .content {
   font-size: 1rem;
 }
@@ -61,10 +56,6 @@ body {
   justify-content: center;
   align-items: center;
   gap: 10px;
-}
-
-.heading-2 {
-  font-weight: 600;
 }
 
 .user-container {
@@ -106,10 +97,6 @@ body {
     font-size: 1.5rem;
   }
 
-  .heading-1 {
-    font-size: 1rem;
-  }
-
   .content {
     font-size: 0.8rem;
   }
@@ -131,10 +118,6 @@ body {
     gap: 10px;
   }
 
-  .heading-2 {
-    font-size: 0.8rem;
-  }
-
   .user-container {
     gap: 10px;
   }
@@ -152,10 +135,6 @@ body {
 
   .title {
     font-size: 1.8rem;
-  }
-
-  .heading-1 {
-    font-size: 1.2rem;
   }
 
   .content {
@@ -179,10 +158,6 @@ body {
     gap: 15px;
   }
 
-  .heading-2 {
-    font-size: 0.9rem;
-  }
-
   .user-container {
     gap: 15px;
   }
@@ -200,10 +175,6 @@ body {
 
   .title {
     font-size: 2rem;
-  }
-
-  .heading-1 {
-    font-size: 1.3rem;
   }
 
   .content {
@@ -227,10 +198,6 @@ body {
     gap: 15px;
   }
 
-  .heading-2 {
-    font-size: 1rem;
-  }
-
   .user-container {
     gap: 15px;
   }
@@ -248,10 +215,6 @@ body {
   
     .title {
       font-size: 4rem;
-    }
-  
-    .heading-1 {
-      font-size: 2rem;
     }
   
     .content {
@@ -275,9 +238,6 @@ body {
       gap: 15px;
     }
   
-    .heading-2 {
-      font-size: 1.4rem;
-    }
   
     .user-container {
       gap: 15px;
