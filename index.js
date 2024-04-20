@@ -16,8 +16,13 @@ const app = Vue.createApp({
   },
   methods: {
     calculateAge() {
-      // (millisecond since Jan 1 1970 - millisecond since dob) / millisecond in 1 year
-      const age = Math.floor((new Date() - new Date(this.dob).getTime()) / 31536000000);
+      let dobDate = new Date(this.dob);
+      let currentDate = new Date();
+      let age = currentDate.getFullYear() - dobDate.getFullYear();
+      if (currentDate.getMonth() < dobDate.getMonth() || 
+        (currentDate.getMonth() === dobDate.getMonth() && currentDate.getDate() < dobDate.getDate())) {
+        age--;
+      }
       this.age = age;
     },
     validateAge() {
