@@ -16,9 +16,7 @@ const app = Vue.createApp({
   },
   methods: {
     calculateAge() {
-      const age = Math.floor(
-        (new Date() - new Date(this.dob).getTime()) / 3.15576e10
-      );
+      const age = Math.floor((new Date() - new Date(this.dob).getTime()) / 3.15576e+10)
       this.age = age;
     },
     validateAge() {

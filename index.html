@@ -11,24 +11,24 @@
 
 <body>
     <div id="app">
-        <h1>Personal Info</h1>
-        <div><span class="heading-1">NAME: </span>{{name}}</div>
-        <div><span class="heading-1">ADDRESS: </span>{{address}}</div>
-        <div><span class="heading-1">DOB: </span>{{dob}}</div>
+        <h1 class="title">Personal Info</h1>
+        <div class="content"><span class="heading-1">NAME: </span>{{name}}</div>
+        <div class="content"><span class="heading-1">ADDRESS: </span>{{address}}</div>
+        <div class="content"><span class="heading-1">DOB: </span>{{dob}}</div>
         <button @click="calculateAge">Calculate Age</button>
-        <div v-show="age">
-            <div><span class="heading-1">Age: </span>{{age}}</div>
+        <div v-show="age" class="age-container">
+            <div class="content"><span class="heading-1">Age: </span>{{age}}</div>
             <button @click="validateAge">Validate Age</button>
         </div>
-        <div v-show="ageValidation">
+        <div v-show="ageValidation" class="validation-container">
             <p v-if="isValid" class="success">You Are Ok</p>
             <p v-else class="error">You Are Underage</p>
         </div>
         <div class="user-container">
             <ul v-for="user in users" class="user-data">
-                <li><img :src="user.imgUrl" alt="user image"></li>
-                <li><span class="heading-2">NAME: </span>{{user.name}}</li>
-                <li><span class="heading-2">AGE: </span>{{user.age}}</li>
+                <li><div class="img-container"><img :src="user.imgUrl" alt="user image"></div></li>
+                <li><div class="content"><span class="heading-2">UserName: </span>{{user.name}}</div></li>
+                <li><div class="content"><span class="heading-2">Age: </span>{{user.age}}</div></li>
             </ul>
         </div>
     </div>
