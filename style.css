@@ -208,42 +208,41 @@ body {
 }
 
 @media only screen and (min-width: 2560px) {
-    #app {
-      gap: 20px;
-      padding: 20px 60px;
-    }
-  
-    .title {
-      font-size: 4rem;
-    }
-  
-    .content {
-      font-size: 1.5rem;
-    }
-  
-    #app button {
-      padding: 8px 15px;
-      font-size: 1.4rem;
-    }
-  
-    .age-container button {
-      margin-top: 15px;
-    }
-  
-    .validation-container {
-      font-size: 1.5rem;
-    }
-  
-    .user-data {
-      gap: 15px;
-    }
-  
-  
-    .user-container {
-      gap: 15px;
-    }
-  
-    .img-container {
-      height: 8rem;
-    }
+  #app {
+    gap: 20px;
+    padding: 20px 60px;
   }
+
+  .title {
+    font-size: 4rem;
+  }
+
+  .content {
+    font-size: 1.5rem;
+  }
+
+  #app button {
+    padding: 8px 15px;
+    font-size: 1.4rem;
+  }
+
+  .age-container button {
+    margin-top: 15px;
+  }
+
+  .validation-container {
+    font-size: 1.5rem;
+  }
+
+  .user-data {
+    gap: 15px;
+  }
+
+  .user-container {
+    gap: 15px;
+  }
+
+  .img-container {
+    height: 8rem;
+  }
+}

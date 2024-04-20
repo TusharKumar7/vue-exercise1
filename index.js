@@ -17,7 +17,7 @@ const app = Vue.createApp({
   methods: {
     calculateAge() {
       // (millisecond since Jan 1 1970 - millisecond since dob) / millisecond in 1 year
-      const age = Math.floor((new Date() - new Date(this.dob).getTime()) / 31536000000)
+      const age = Math.floor((new Date() - new Date(this.dob).getTime()) / 31536000000);
       this.age = age;
     },
     validateAge() {

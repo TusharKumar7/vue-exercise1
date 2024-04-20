@@ -1,38 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <title>Exercise1</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div id="app">
-        <h1 class="title">Personal Info</h1>
-        <p class="content"><strong>NAME:</strong> {{name}}</p>
-        <p class="content"><strong>ADDRESS:</strong> {{address}}</p>
-        <p class="content"><strong>DOB:</strong> {{dob}}</p>
-        <button @click="calculateAge">Calculate Age</button>
-        <div v-show="age" class="age-container">
-            <p class="content"><strong>Age:</strong> {{age}}</p>
-            <button @click="validateAge">Validate Age</button>
-        </div>
-        <div v-show="showValidation" class="validation-container">
-            <p v-if="isValid" class="success">You Are Ok</p>
-            <p v-else class="error">You Are Underage</p>
-        </div>
-        <div class="user-container">
-            <ul v-for="user in users" class="user-data">
-                <li><div class="img-container"><img :src="user.imgUrl" alt="user image"></div></li>
-                <li class="content"><strong>UserName:</strong> {{user.name}}</li>
-                <li class="content"><strong>Age:</strong> {{user.age}}</li>
-            </ul>
-        </div>
+      <h1 class="title">Personal Info</h1>
+      <p class="content"><strong>NAME:</strong> {{name}}</p>
+      <p class="content"><strong>ADDRESS:</strong> {{address}}</p>
+      <p class="content"><strong>DOB:</strong> {{dob}}</p>
+      <button @click="calculateAge">Calculate Age</button>
+      <div v-show="age" class="age-container">
+        <p class="content"><strong>Age:</strong> {{age}}</p>
+        <button @click="validateAge">Validate Age</button>
+      </div>
+      <div v-show="showValidation" class="validation-container">
+        <p v-if="isValid" class="success">You Are Ok</p>
+        <p v-else class="error">You Are Underage</p>
+      </div>
+      <div class="user-container">
+        <ul v-for="user in users" class="user-data">
+          <li>
+            <div class="img-container">
+              <img :src="user.imgUrl" alt="user image" />
+            </div>
+          </li>
+          <li class="content"><strong>UserName:</strong> {{user.name}}</li>
+          <li class="content"><strong>Age:</strong> {{user.age}}</li>
+        </ul>
+      </div>
     </div>
     <script src="index.js"></script>
-</body>
-
+  </body>
 </html>
