@@ -19,15 +19,14 @@
         <p class="content"><strong>Age:</strong> {{age}}</p>
         <button @click="validateAge">Validate Age</button>
       </div>
-      <div v-show="showValidation" class="validation-container">
-        <p v-if="isValid" class="success">You Are Ok</p>
-        <p v-else class="error">You Are Underage</p>
+      <div v-if="showValidationText" class="validation-container">
+        <p :class="isValidAge ? 'success' : 'error'">{{ isValidAge ? 'You Are Ok' : 'You Are Underage' }}</p>
       </div>
       <div class="user-container">
-        <ul v-for="user in users" class="user-data">
+        <ul v-for="user in users" class="user-data" :key="user.name">
           <li>
             <div class="img-container">
-              <img :src="user.imgUrl" alt="user image" />
+              <img :src="user.imgUrl" alt="user.name" />
             </div>
           </li>
           <li class="content"><strong>UserName:</strong> {{user.name}}</li>

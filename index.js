@@ -5,8 +5,8 @@ const app = Vue.createApp({
       address: "street no. 123, Shibuya, Japan",
       dob: "2000-09-11",
       age: null,
-      isValid: false,
-      showValidation: false,
+      isValidAge: false,
+      showValidationText: false,
       users: [
         { name: `Rahul`, age: 24, imgUrl: "./assets/img1.webp" },
         { name: `Rohit`, age: 20, imgUrl: "./assets/img2.webp" },
@@ -26,8 +26,8 @@ const app = Vue.createApp({
       this.age = age;
     },
     validateAge() {
-      this.showValidation = true;
-      this.isValid = this.age < 18 ? false : true;
+      this.showValidationText = true;
+      this.isValidAge = this.age < 18 ? false : true;
     },
   },
 });
